@@ -17,7 +17,7 @@ endfunction
 
 function void build_phase(uvm_phase phase);
     if(!uvm_config_db #(virtual dff_if)::get(this,"","vif",vif))
-        `uvm_fatal("NOVIF","No interface")
+      `uvm_fatal("NO VIF","No interface")
 endfunction
 
 task run_phase(uvm_phase phase);
