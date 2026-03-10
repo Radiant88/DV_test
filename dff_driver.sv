@@ -17,7 +17,7 @@ function build_phase(uvm_phase phase);
 endfunction
 
 task run_phase(uvm_phase phase);
-dff_txn tx;
+dff_transaction tx;
 forever begin
   seq_item_port.get_next_item(tx);
   @(posedge vif.clk)     //interchange this with vif.d line for right working
